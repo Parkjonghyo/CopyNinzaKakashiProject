@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.clonecoovapp.setup.SetupActivity;
+
 public class SplashActivity extends AppCompatActivity {
     /* 스플래시 화면이 표시되는 시간을 설정(ms) */
     private final int SPLASH_DISPLAY_TIME = 3000;
@@ -24,7 +26,7 @@ public class SplashActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                startActivity(new Intent(SplashActivity.this, SetupActivity.class));
                 // 스플래시 액티비티를 스택에서 제거 (220209, 오늘 말해주셨던 것 finish)
                 SplashActivity.this.finish();
             }
