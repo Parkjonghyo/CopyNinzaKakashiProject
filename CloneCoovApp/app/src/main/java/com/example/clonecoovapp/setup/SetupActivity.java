@@ -28,7 +28,7 @@ public class SetupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup);
 
-        changeFragment(new SelectLanguageFragment());
+        changeFragment(new SelectLanguageFragment(this));
 
     }
 }

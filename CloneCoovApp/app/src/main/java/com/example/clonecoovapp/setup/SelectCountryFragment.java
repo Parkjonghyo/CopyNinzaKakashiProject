@@ -1,6 +1,7 @@
 package com.example.clonecoovapp.setup;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -17,20 +18,21 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.clonecoovapp.MainActivity;
 import com.example.clonecoovapp.R;
 import com.example.clonecoovapp.common.CommonVal;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SelectLanguageFragment extends Fragment {
+public class SelectCountryFragment extends Fragment {
 
-    RecyclerView rcv_language;
+    RecyclerView rcv_country;
     TextView title;
-    Button btn_select_language;
-    SetupActivity sActivity;
+    Button btn_select_country;
+    Activity sActivity;
 
-    public SelectLanguageFragment(SetupActivity sActivity) {
+    public SelectCountryFragment(Activity sActivity) {
         this.sActivity = sActivity;
     }
 
@@ -38,25 +40,27 @@ public class SelectLanguageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_select_language, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_select_country, container, false);
 
-        btn_select_language = rootView.findViewById(R.id.btn_select_language);
+        btn_select_country = rootView.findViewById(R.id.btn_select_country);
         title = rootView.findViewById(R.id.title);
 
-        changeSpecialChars(title, "언어");
+        changeSpecialChars(title, "국가 및 지역");
 
         List<OptionVO> list = tempInit();
 
         SetupAdapter adapter = new SetupAdapter(getContext(), list);
         RecyclerView.LayoutManager manager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-        rcv_language = rootView.findViewById(R.id.rcv_language);
-        rcv_language.setAdapter(adapter);
-        rcv_language.setLayoutManager(manager);
+        rcv_country = rootView.findViewById(R.id.rcv_country);
+        rcv_country.setAdapter(adapter);
+        rcv_country.setLayoutManager(manager);
 
-        btn_select_language.setOnClickListener(new View.OnClickListener() {
+        btn_select_country.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sActivity.changeFragment(new SelectCountryFragment(sActivity));
+                Intent intent = new Intent(sActivity, MainActivity.class);
+                startActivity(intent);
+                sActivity.finish();
             }
         });
 
@@ -77,15 +81,15 @@ public class SelectLanguageFragment extends Fragment {
 
         List<OptionVO> tempList = new ArrayList<>();
 
-        tempList.add(new OptionVO("한국어", true, true, CommonVal.SEL_LANGUAGE));
-        tempList.add(new OptionVO("영어", false, true, CommonVal.SEL_LANGUAGE));
-        tempList.add(new OptionVO("일본어", false, true, CommonVal.SEL_LANGUAGE));
-        tempList.add(new OptionVO("프랑스어", false, false, CommonVal.SEL_LANGUAGE));
-        tempList.add(new OptionVO("중국어", false, false, CommonVal.SEL_LANGUAGE));
-        tempList.add(new OptionVO("아랍어", false, false, CommonVal.SEL_LANGUAGE));
-        tempList.add(new OptionVO("힌두어", false, false, CommonVal.SEL_LANGUAGE));
-        tempList.add(new OptionVO("독일어", false, false, CommonVal.SEL_LANGUAGE));
-        tempList.add(new OptionVO("러시아어", false, false, CommonVal.SEL_LANGUAGE));
+        tempList.add(new OptionVO("대한민국", true, true, CommonVal.SEL_COUNTRY));
+        tempList.add(new OptionVO("가나", false, true, CommonVal.SEL_COUNTRY));
+        tempList.add(new OptionVO("가봉", false, true, CommonVal.SEL_COUNTRY));
+        tempList.add(new OptionVO("가이아나", false, true, CommonVal.SEL_COUNTRY));
+        tempList.add(new OptionVO("감비아", false, true, CommonVal.SEL_COUNTRY));
+        tempList.add(new OptionVO("과테말라", false, true, CommonVal.SEL_COUNTRY));
+        tempList.add(new OptionVO("그레나다", false, true, CommonVal.SEL_COUNTRY));
+        tempList.add(new OptionVO("미국", false, true, CommonVal.SEL_COUNTRY));
+        tempList.add(new OptionVO("중국", false, true, CommonVal.SEL_COUNTRY));
 
         return tempList;
     }

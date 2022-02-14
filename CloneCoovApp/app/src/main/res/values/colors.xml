@@ -10,4 +10,5 @@
     <color name="blue_200">#5684ff</color>
     <color name="blue_500">#0036b0</color>
     <color name="blue_700">#012c77</color>
+    <color name="gray">#aaaaaa</color>
 </resources>
