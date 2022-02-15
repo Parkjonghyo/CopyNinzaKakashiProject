@@ -21,6 +21,8 @@ import android.widget.TextView;
 import com.example.clonecoovapp.MainActivity;
 import com.example.clonecoovapp.R;
 import com.example.clonecoovapp.common.CommonVal;
+import com.example.clonecoovapp.explain.ExplainActivity;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +31,7 @@ public class SelectCountryFragment extends Fragment {
 
     RecyclerView rcv_country;
     TextView title;
-    Button btn_select_country;
+    MaterialButton btn_select_country;
     Activity sActivity;
 
     public SelectCountryFragment(Activity sActivity) {
@@ -58,7 +60,7 @@ public class SelectCountryFragment extends Fragment {
         btn_select_country.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(sActivity, MainActivity.class);
+                Intent intent = new Intent(sActivity, ExplainActivity.class);
                 startActivity(intent);
                 sActivity.finish();
             }

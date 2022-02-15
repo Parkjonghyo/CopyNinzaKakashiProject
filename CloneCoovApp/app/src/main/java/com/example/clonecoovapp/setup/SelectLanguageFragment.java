@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.example.clonecoovapp.R;
 import com.example.clonecoovapp.common.CommonVal;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +28,7 @@ public class SelectLanguageFragment extends Fragment {
 
     RecyclerView rcv_language;
     TextView title;
-    Button btn_select_language;
+    MaterialButton btn_select_language;
     SetupActivity sActivity;
 
     public SelectLanguageFragment(SetupActivity sActivity) {

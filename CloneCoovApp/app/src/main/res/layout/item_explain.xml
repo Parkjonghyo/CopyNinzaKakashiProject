@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_ex"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/ex01"
+        android:layout_weight="8"
+        android:padding="50dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_exTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="완벽한 개인 정보 보호"
+            android:gravity="center_horizontal"
+            android:textColor="#000"
+            android:textSize="25dp"
+            android:fontFamily="@font/notosanskr_bold"
+            android:includeFontPadding="false"
+            />
+        <TextView
+            android:id="@+id/tv_exDesc"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:textColor="#666"
+            android:textSize="16dp"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/notosanskr_medium"
+            android:text="블록체인 기술을 이용해 서버에 사용 기록이\n남지 않아 개인정보를 안전하게 보호합니다."
+            />
+
+    </LinearLayout>
+</LinearLayout>

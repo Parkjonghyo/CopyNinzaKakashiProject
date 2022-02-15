@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginVertical="40dp"
     android:orientation="vertical"
     tools:context=".setup.SelectCountryFragment">
@@ -58,11 +59,12 @@
 
         </ScrollView>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_select_country"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            app:cornerRadius="12dp"
             android:backgroundTint="@color/blue_500"
             android:fontFamily="@font/notosanskr_black"
             android:includeFontPadding="false"

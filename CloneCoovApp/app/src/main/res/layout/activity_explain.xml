@@ -8,44 +8,83 @@
     tools:context=".explain.ExplainActivity">
 
     <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4" />
+        android:layout_gravity="center"
+        android:layout_weight="10" />
 
-    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+            android:id="@+id/dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dampingRatio="1"
+            app:dotsClickable="false"
+            app:dotsColor="@color/blue_200"
+            app:dotsSize="12dp"
+            app:dotsSpacing="4dp"
+            app:stiffness="1000" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2.5"
+        android:gravity="bottom"
         android:orientation="horizontal">
 
-        <TextView
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_go"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textColor="#fff"
+            android:visibility="gone"
+            app:backgroundTint="@color/blue_500"
+            android:fontFamily="@font/notosanskr_black"
+            android:includeFontPadding="false"
+            android:layout_marginHorizontal="32dp"
+            android:text="확인"
+            android:textSize="18dp"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_skip"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="70dp"
             android:layout_weight="1"
             android:fontFamily="@font/notosanskr_medium"
             android:gravity="center"
-            android:paddingBottom="16dp"
+            android:includeFontPadding="false"
             android:text="건너뛰기"
             android:textColor="@color/blue_500"
-            android:textSize="20dp" />
+            android:textSize="20dp"/>
 
-        <TextView
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="70dp"
             android:layout_weight="1"
             android:fontFamily="@font/notosanskr_medium"
             android:gravity="center"
-            android:paddingBottom="16dp"
+            android:includeFontPadding="false"
             android:text="다음"
             android:textColor="@color/blue_500"
             android:textSize="20dp" />
 
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5" />
 
 
 </LinearLayout>
