@@ -1,18 +1,13 @@
-package com.example.clonecoovapp.setup;
+package com.example.clonecoovapp.login;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.FrameLayout;
 
 import com.example.clonecoovapp.R;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class SetupActivity extends AppCompatActivity {
-
+public class LoginCheckActivity extends AppCompatActivity {
 
     public void changeFragment( Fragment to_frag ){
         getSupportFragmentManager().beginTransaction()
@@ -22,9 +17,8 @@ public class SetupActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setup);
+        setContentView(R.layout.activity_login_check);
 
-        changeFragment(new SelectLanguageFragment(this));
-
+        changeFragment(new SetPassFragment(this));
     }
 }

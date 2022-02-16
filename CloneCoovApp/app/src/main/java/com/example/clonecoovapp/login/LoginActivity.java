@@ -1,8 +1,10 @@
-package com.example.clonecoovapp;
+package com.example.clonecoovapp.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.clonecoovapp.R;
 
 public class LoginActivity extends AppCompatActivity {
 

@@ -55,8 +55,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:padding="36px"
-                android:src="@android:drawable/ic_menu_gallery"
+                android:padding="40px"
+                android:src="@drawable/ex_camera"
                 app:tint="@color/blue_500" />
 
             <LinearLayout
@@ -102,8 +102,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:padding="36px"
-                android:src="@android:drawable/ic_menu_camera"
+                android:padding="48px"
+                android:src="@drawable/ex_image"
                 app:tint="@color/blue_500" />
 
             <LinearLayout
@@ -169,7 +169,7 @@
                 android:includeFontPadding="false"
                 android:paddingLeft="12dp"
                 android:text="선택적 접근 권한은 기능 사용 시\n허용이 필요하며 비 허용 시에도 해당\n기능 외 서비스 이용이 가능합니다."
-                android:textSize="18dp" />
+                android:textSize="17dp" />
 
         </LinearLayout>
 
