@@ -4,13 +4,235 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:fontFamily="@font/notosanskr_black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:background="#f2f2f2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/notosanskr_medium"
+                android:gravity="bottom"
+                android:includeFontPadding="false"
+                android:text="코로나19 예방접종 내역"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="130dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/notosanskr_medium"
+                    android:includeFontPadding="false"
+                    android:text="발급 및 업데이트"
+                    android:textSize="12dp"
+                    app:backgroundTint="@color/blue_500"
+                    app:cornerRadius="50dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/get_docu" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="@drawable/radius_top"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_gravity="right|top"
+                android:layout_marginRight="24dp"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/coov_logo_trans_white" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/notosanskr_bold"
+                    android:includeFontPadding="false"
+                    android:text="본인인증증명서"
+                    android:textColor="@color/white"
+                    android:textSize="28dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/h1_logo" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/radius_bottom">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanskr_medium"
+                    android:includeFontPadding="false"
+                    android:text="성인여부"
+                    android:textSize="12dp"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanskr_medium"
+                    android:includeFontPadding="false"
+                    android:textSize="20dp"
+                    android:text="성인"
+                    android:textColor="#000" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:paddingTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanskr_medium"
+                    android:includeFontPadding="false"
+                    android:text="성명"
+                    android:textSize="12dp"
+                    android:textColor="#000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanskr_medium"
+                    android:includeFontPadding="false"
+                    android:text="박종효"
+                    android:textSize="12dp"
+                    android:textColor="#888" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanskr_medium"
+                    android:includeFontPadding="false"
+                    android:text="생년월일"
+                    android:textSize="12dp"
+                    android:textColor="#000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanskr_medium"
+                    android:includeFontPadding="false"
+                    android:text="성인여부"
+                    android:textSize="12dp"
+                    android:textColor="#888" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+        android:gravity="bottom">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/my_document" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/qr_login" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/hamburger" />
+
+    </LinearLayout>
+
 
 </LinearLayout>
